@@ -1,0 +1,44 @@
+[ui_search]
+other = "search this site"
+
+[footer_all_rights_reserved]
+other = "footer_all_rights_reserved"
+
+[footer_privacy_policy]
+other = "footer_privacy_policy"
+
+[post_view_this]
+other = "post_view_this"
+
+[post_edit_this]
+other = "post_edit_this"
+
+[post_create_child_page]
+other = "post_create_child_page"
+
+[post_create_issue]
+other = "post_create_issue"
+
+[post_create_project_issue]
+other = "post_create_project_issue"
+
+[feedback_title]
+other = "feedback_title"
+
+[feedback_question]
+other = "feedback_question"
+
+[feedback_positive]
+other = "feedback_positive"
+
+[feedback_negative]
+other = "feedback_negative"
+
+[print_entire_section]
+other = "print_entire_section"
+
+[toc_on_this_page]
+other = "toc_on_this_page"
+
+[post_last_mod]
+other = "post_last_mod"

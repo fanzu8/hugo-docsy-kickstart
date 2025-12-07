@@ -1,0 +1,61 @@
+{{/* ---------- Page context ---------- */}}
+{{ $rel := .RelPermalink }}                   <!-- e.g. /zh/docs/v2.0/examples/ -->
+
+{{/* Split path into parts */}}
+{{ $parts := split $rel "/" }}                <!-- ["", "zh", "docs", "v2.0", "examples", ""] -->
+
+{{/* ---------- Current language ---------- */}}
+{{ $lang := index $parts 1 }}                 <!-- zh -->
+
+{{/* ---------- Extract current version ---------- */}}
+{{ $currentVersion := "" }}
+{{ if ge (len $parts) 4 }}
+  {{ $currentVersion = index $parts 3 }}      <!-- v2.0 -->
+{{ end }}
+
+{{/* ---------- Extract remaining path after version ---------- */}}
+{{ $after := slice }}
+{{ range $i, $p := $parts }}
+  {{ if ge $i 4 }}                             <!-- From "examples" onward -->
+    {{ $after = $after | append $p }}
+  {{ end }}
+{{ end }}
+
+{{ $afterVersion := "" }}
+{{ if gt (len $after) 0 }}
+  {{ $afterVersion = printf "/%s" (delimit $after "/") }}  <!-- /examples/ -->
+{{ end }}
+
+<div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ if ne $currentVersion "" }}
+      {{ $currentVersion }}
+    {{ else }}
+      {{ .Site.Params.version_menu }}
+    {{ end }}
+  </a>
+
+  <ul class="dropdown-menu">
+    {{ $preservePath := .Site.Params.version_menu_pagelinks }}
+
+    {{ range .Site.Params.versions }}
+      {{ $target := "" }}
+
+      {{ if $preservePath }}
+        {{/* Keep same subpath when switching versions */}}
+        {{ $target = printf "/%s/docs/%s%s" $lang .version $afterVersion }}
+      {{ else }}
+        {{/* Just go to version root */}}
+        {{ $target = printf "/%s/docs/%s/" $lang .version }}
+      {{ end }}
+
+      <li>
+        <a class="dropdown-item {{ if eq .version $currentVersion }}active{{ end }}" 
+           href="{{ $target }}"
+           {{ if eq .version $currentVersion }}aria-current="true"{{ end }}>
+          {{ .version }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>

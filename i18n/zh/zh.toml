@@ -1,0 +1,44 @@
+[ui_search]
+other = "搜索"
+
+[footer_all_rights_reserved]
+other = "保留所有权利"
+
+[footer_privacy_policy]
+other = "隐私政策"
+
+[post_view_this]
+other = "查看此页面"
+
+[post_edit_this]
+other = "编辑此页面"
+
+[post_create_child_page]
+other = "创建子页面"
+
+[post_create_issue]
+other = "创建议题"
+
+[post_create_project_issue]
+other = "在项目中创建议题"
+
+[feedback_title]
+other = "页面反馈"
+
+[feedback_question]
+other = "此页面对您有帮助吗？"
+
+[feedback_positive]
+other = "有帮助"
+
+[feedback_negative]
+other = "无帮助"
+
+[print_entire_section]
+other = "打印整个章节"
+
+[toc_on_this_page]
+other = "本页内容"
+
+[post_last_mod]
+other = "最后修改于"

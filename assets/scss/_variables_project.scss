@@ -1,0 +1,25 @@
+/*
+Projects can override this file. For details, see:
+https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
+*/
+
+$primary: #4e0969;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #f0ad4e;
+$danger: #dc3545;
+
+// 链接颜色
+$link-color: $primary;
+
+// 导航栏
+$navbar-bg: $primary;
+$navbar-color: #fff;
+$navbar-brand-color: #fff;
+
+// 页脚
+$footer-bg: #f8f9fa;
+
+// 可选：调整字体等
+$font-size-base: 1rem;

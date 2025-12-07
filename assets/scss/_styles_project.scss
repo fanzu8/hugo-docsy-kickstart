@@ -1,0 +1,16 @@
+/*
+Project-specific styles. For details, see:
+https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
+*/
+
+:root {
+    --td-primary: #0056b3;
+    --td-secondary: #6c757d;
+    --td-accent: #f0ad4e;
+  }
+
+
+// Dark mode enhancements
+@import 'td/color-adjustments-dark';
+@import 'td/code-dark';
+@import 'td/gcs-search-dark';
